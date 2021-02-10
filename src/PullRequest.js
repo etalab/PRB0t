@@ -146,6 +146,7 @@ export default class PullRequest {
 
             return this.repo.fork().then(res => {
                 this.fork = this.gh.getRepo(res.data.full_name);
+                console.log('this is my fork:', this.fork)
                 resolve(res);
             }).catch(reject);
 
